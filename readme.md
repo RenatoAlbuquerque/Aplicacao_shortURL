@@ -134,7 +134,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
     </tr>
 </table>
 
-#### **Diagrama Realcional do Banco de dados**
+#### **Diagrama Relacional do Banco de dados**
 
   <img alt="diagramaRelacional" title="diagramaRelacional" src="./Img/diagramaRelacional.png" width="300px">
 
