@@ -14,7 +14,7 @@
 
 O encurtador de link faz parte do processo seletivo da Speedio para Desenvolvedor Front-End na etapa de teste técnico.
 
-Projeto desenvolvido durante a 1 semana sendo composto por Frontend, Backend e Banco de dados.
+Projeto composto por Frontend, Backend e Banco de dados.
 
 ---
 
