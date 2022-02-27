@@ -99,7 +99,7 @@ $ docker run --name postgres -e POSTGRES_PASSWORD=postgres -p 5432:5432 -d postg
 # Verifique se o container esta em execução
 $ docker ps
 # Acesse a pasta do projeto no terminal/cmd
-$ cd README-ecoleta - FAZER
+$ cd Aplicacao_shortURL
 # Instale as dependências
 $ npm install
 # Execute a aplicação
