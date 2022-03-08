@@ -6,10 +6,17 @@ import {
 } from "../../Components";
 import { ProductsContext } from "../../providers/products";
 import api from "../../services/api";
+import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 
 const TopUrl = () => {
-  const { isLogin, isRegister } = useContext(ProductsContext);
-  const [urlRanking, setUrlRanking] = useState([]);
+  const {
+    isLogin,
+    isRegister,
+    adicionarFavorito,
+    removerFavorito,
+    urlRanking,
+    setUrlRanking,
+  } = useContext(ProductsContext);
 
   const loadUrlsRanking = async () => {
     try {
@@ -18,6 +25,13 @@ const TopUrl = () => {
     } catch (error) {
       console.log(error);
     }
+  };
+
+  const addFav = async (url) => {
+    adicionarFavorito(url);
+  };
+  const remFav = async (url) => {
+    removerFavorito(url);
   };
 
   const incrementClick = async (url) => {
@@ -66,6 +80,12 @@ const TopUrl = () => {
                     >
                       URL Encurtada
                     </th>
+                    <th
+                      scope="col"
+                      className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                    >
+                      Favorito
+                    </th>
 
                     <th
                       scope="col"
@@ -103,6 +123,17 @@ const TopUrl = () => {
                         </div>
                       </td>
 
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                        <button>
+                          <div>
+                            {url.favs === true ? (
+                              <AiFillStar onClick={() => remFav(url)} />
+                            ) : (
+                              <AiOutlineStar onClick={() => addFav(url)} />
+                            )}
+                          </div>
+                        </button>
+                      </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                         {url.click}
                       </td>

@@ -18,6 +18,7 @@ const ProductsProvider = (props) => {
   const [loading, setLoading] = useState(true);
 
   const [urls, setUrls] = useState([]);
+  const [urlRanking, setUrlRanking] = useState([]);
 
   //Login - Logout - Criar Sessão
   const login = async (email, password) => {
@@ -120,6 +121,31 @@ const ProductsProvider = (props) => {
     }
   };
 
+  const loadUrlsRanking = async () => {
+    try {
+      const data = await api.get(`/urls`);
+      setUrlRanking(data.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const adicionarFavorito = async (url) => {
+    try {
+      await api.get(`/urls/addfav/${url.id}`);
+      loadUrlsRanking();
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  const removerFavorito = async (url) => {
+    try {
+      await api.get(`/urls/removefav/${url.id}`);
+      loadUrlsRanking();
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <ProductsContext.Provider
       value={{
@@ -139,6 +165,13 @@ const ProductsProvider = (props) => {
         logout,
         createSession,
 
+        //favoritos
+        adicionarFavorito,
+        removerFavorito,
+
+        //top 100 urls
+        urlRanking,
+        setUrlRanking,
         //alertas
         msgAlertAdd,
         registerFail,

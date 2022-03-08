@@ -44,6 +44,34 @@ class ShortUrlsController {
     res.send(resultado);
   }
 
+  static async adcFavs(req, res) {
+    const urlAtual = req.params.id_url;
+
+    const resultado = await database.shortURL.findOne({
+      where: { id: urlAtual },
+    });
+
+    if (resultado.favs === false) {
+      await resultado.update({ favs: true });
+    }
+    await resultado.save();
+    res.send(resultado);
+  }
+
+  static async removeFavs(req, res) {
+    const urlAtual = req.params.id_url;
+
+    const resultado = await database.shortURL.findOne({
+      where: { id: urlAtual },
+    });
+
+    if (resultado.favs === true) {
+      await resultado.update({ favs: false });
+    }
+    await resultado.save();
+    res.send(resultado);
+  }
+
   static async criarUrlUsuario(req, res) {
     const { user_id, title } = req.body;
 

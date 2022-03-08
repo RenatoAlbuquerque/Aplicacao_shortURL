@@ -17,6 +17,7 @@ module.exports = (sequelize, DataTypes) => {
     {
       title: DataTypes.STRING,
       urlShort: DataTypes.STRING,
+      favs: DataTypes.BOOLEAN,
       click: DataTypes.NUMBER,
     },
     {

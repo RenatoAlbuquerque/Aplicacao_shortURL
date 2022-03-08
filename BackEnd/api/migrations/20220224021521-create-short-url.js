@@ -21,6 +21,11 @@ module.exports = {
         allowNull: false,
         type: Sequelize.STRING,
       },
+      favs: {
+        allowNull: false,
+        type: Sequelize.BOOLEAN,
+        defaultValue: false,
+      },
       click: {
         type: Sequelize.INTEGER,
         allowNull: true,

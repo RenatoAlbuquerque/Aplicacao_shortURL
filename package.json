@@ -4,6 +4,7 @@
     "install": "concurrently \"cd FrontEnd && npm install\" \"npm install\" \"cd BackEnd && npm install\""
   },
   "dependencies": {
-    "concurrently": "^7.0.0"
+    "concurrently": "^7.0.0",
+    "react-icons": "^4.3.1"
   }
 }
