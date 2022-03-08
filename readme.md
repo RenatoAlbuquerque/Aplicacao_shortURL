@@ -14,7 +14,7 @@
 
 O encurtador de link faz parte do processo seletivo da Speedio para Desenvolvedor Front-End na etapa de teste técnico.
 
-Projeto desenvolvido durante a 1 semana sendo composto por Frontend, Backend e Banco de dados.
+Projeto composto por Frontend, Backend e Banco de dados.
 
 ---
 
@@ -89,7 +89,7 @@ Para visualização do banco de dados recomendo a utilização do [DBeaver](http
 
 #### 🎲 Rodando o Backend (servidor) e a Aplicação Web (Frontend)
 
-> Configure o DBeaver de acordo com o arquivo [config.json](https://github.com/tgmarinho/README-ecoleta-----/BackEnd/api/config/config.json)
+> Configure o DBeaver de acordo com o arquivo [config.json](https://github.com/RenatoAlbuquerque/Aplicacao_shortURL/blob/main/BackEnd/api/config/config.json)
 
 ```bash
 # Clone este repositório
@@ -134,7 +134,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
     </tr>
 </table>
 
-#### **Diagrama Realcional do Banco de dados**
+#### **Diagrama Relacional do Banco de dados**
 
   <img alt="diagramaRelacional" title="diagramaRelacional" src="./Img/diagramaRelacional.png" width="300px">
 
@@ -148,7 +148,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - **[SweetAlert2](https://sweetalert2.github.io/#download)**
 - **[TailwindCSS](https://tailwindcss.com)**
 
-> Veja o arquivo [package.json](https://github.com/tgmarinho/README-ecoleta/blob/master/web/package.json) -- fazer
+> Veja o arquivo [package.json](https://github.com/RenatoAlbuquerque/Aplicacao_shortURL/blob/main/FrontEnd/package.json)
 
 #### [](https://github.com/tgmarinho/Ecoleta#server-nodejs--typescript)**Server** ([NodeJS](https://nodejs.org/en/) + [Sequelize](https://sequelize.org/v6/))
 
@@ -161,7 +161,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - **[Path](https://www.npmjs.com/package/path)**
 - **[Pg](https://www.npmjs.com/package/pg)**
 
-> Veja o arquivo [package.json](https://github.com/tgmarinho/README-ecoleta/blob/master/server/package.json) -- fazer
+> Veja o arquivo [package.json](https://github.com/RenatoAlbuquerque/Aplicacao_shortURL/blob/main/BackEnd/package.json)
 
 **Utilitários**
 
